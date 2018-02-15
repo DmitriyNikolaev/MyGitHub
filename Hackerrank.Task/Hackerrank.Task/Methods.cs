@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace Hackerrank.Task
 {
-    class MiniMaxSum
+    public class Methods
     {
+        public static string timeConversion(string s)
+        {
+            //Console.WriteLine(DateTime.Parse(s).ToString("HH:mm:ss"));
+            return DateTime.Parse(s).ToString("HH:mm:ss");
+        }
+
         public static void miniMaxSum(int[] arr)
         {
             var count = arr.Length;
@@ -30,6 +36,22 @@ namespace Hackerrank.Task
             //long minSum = arr.Sum() - arr.Max();
             //long maxSum = arr.Sum() - arr.Min();
             //Console.WriteLine("{0} {1}", minSum, maxSum);
+        }
+
+        public static int birthdayCakeCandles(int n, int[] ar)
+        {
+            var max = ar.Max();
+            int count = 0;
+            for (int i = 0; i < n; i++)
+            {
+                if (ar[i] == max) count++;
+            }
+            return count;
+        }
+
+        public static string misereNim(int[] s)
+        {
+            return "";
         }
     }
 }
